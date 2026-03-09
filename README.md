@@ -72,11 +72,3 @@ Fine-tuning on 2,000+ task-specific examples eliminates these failure modes.
 4. **API keys blocked by GitHub push protection** — Accidentally 
    committed HF token in notebooks. Fixed by sed-replacing tokens 
    with placeholders and force-pushing amended commit.
-
-> *(Fill this section in after training — this is what hiring managers want to see!)*
-
-Examples of things to document:
-- Did the model overfit early? (look for val_loss increasing while train_loss drops)
-- Did it still add markdown fences sometimes? (document frequency and fix via data)
-- Did boolean fields (`in_stock`) serialize inconsistently? (document and fix)
-- Did DPO improve or slightly regress one metric? (explain the tradeoff)
