@@ -57,6 +57,22 @@ Fine-tuning on 2,000+ task-specific examples eliminates these failure modes.
 
 ## What Went Wrong & How I Fixed It
 
+1. **Dependency conflicts on Runpod** — wandb, pydantic and 
+   typing_extensions had version mismatches. Fixed by upgrading 
+   all three packages before running setup.
+
+2. **TRL DPOTrainer collator bug** — TRL's DPODataCollatorWithPadding 
+   produced None token ids with Qwen's tokenizer. Fixed by implementing 
+   a custom SafeDPOCollator that handles tokenization explicitly.
+
+3. **DPO loss collapsed to zero** — SFT achieved 100% exact match, 
+   leaving no signal for DPO to improve on. In production with noisier 
+   real-world data, DPO would show meaningful incremental gains.
+
+4. **API keys blocked by GitHub push protection** — Accidentally 
+   committed HF token in notebooks. Fixed by sed-replacing tokens 
+   with placeholders and force-pushing amended commit.
+
 > *(Fill this section in after training — this is what hiring managers want to see!)*
 
 Examples of things to document:
