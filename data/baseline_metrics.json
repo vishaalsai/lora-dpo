@@ -1,0 +1,7 @@
+{
+  "model": "Base Model (Qwen2.5-7B-Instruct)",
+  "json_validity_rate": 1.0,
+  "exact_match_accuracy": 0.39,
+  "avg_field_coverage": 0.8025,
+  "n_samples": 100
+}
