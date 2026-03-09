@@ -9,6 +9,7 @@
 ![GPU](https://img.shields.io/badge/GPU-NVIDIA%20A40%2048GB-76b900?logo=nvidia)
 
 ---
+[![Model on HuggingFace](https://img.shields.io/badge/🤗%20Model-vishaalsai29/qwen2.5--7b--json--extraction--sft-yellow)](https://huggingface.co/vishaalsai29/qwen2.5-7b-json-extraction-sft)
 
 ## 🎯 What This Project Does
 
